@@ -7,6 +7,7 @@ namespace MyOOP
         public int x;
         public int y;
         public char sym;
+        
 
         public Point() {
         }
@@ -17,10 +18,42 @@ namespace MyOOP
             this.sym = sym;
         }
 
+        public Point(Point p)
+        {
+            x = p.x;
+            y = p.y;
+            sym = p.sym;
+        }
+
+        public void Move(int offset, Direction direction)
+        {
+            if (direction == Direction.RIGTH)
+            {
+                x = x + offset;
+            }
+            else if (direction == Direction.LEFT)
+            {
+                x = x - offset;
+            }
+            else if (direction == Direction.UP)
+            {
+                y = y + offset;
+            }
+            else
+            {
+                y = y - offset;
+            }
+        }
+
         public void Draw()
         {
             Console.SetCursorPosition(x, y);
             Console.Write(sym);
+        }
+
+        public override string ToString()
+        {
+            return x + ", " + y;
         }
     }
 }
