@@ -1,15 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
 namespace MyOOP
 {
-    class VerticalLine
+    class VerticalLine : Figure
     {
-        List<Point> pList;
-
         public VerticalLine(int yTop, int yBottom, int x, char sym)
         {
             pList = new List<Point>();
@@ -17,16 +11,6 @@ namespace MyOOP
             {
                 Point p = new Point(x, y, sym);
                 pList.Add(p);
-            }
-
-
-        }
-
-        public void Draw()
-        {
-            foreach (var item in pList)
-            {
-                item.Draw();
             }
         }
     }

@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 
 namespace MyOOP
 {
@@ -16,12 +15,7 @@ namespace MyOOP
             VerticalLine vline = new VerticalLine(6, 13, 5, '*');
             vline.Draw();
 
-
-
-
             Console.ReadKey();
         }
-
-
     }
 }
